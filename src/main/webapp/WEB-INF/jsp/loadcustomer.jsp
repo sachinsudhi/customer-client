@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <head>
 <title>Load Customer</title>
 <meta charset="utf-8">
@@ -37,30 +42,32 @@
 					<li><a href="${contextPath}/customers/list">Show Customer</a></li>
 					<li><a href="${contextPath}/customers">Add Customer</a></li>
 					<li><a href="#">Load Customer</a></li>
-					<li><a href="${contextPath}/customers/update">Update Customer</a></li>
-					<li><a href="${contextPath}/customers/delete">Delete Customer</a></li>
+					<li><a href="${contextPath}/customers/update">Update
+							Customer</a></li>
+					<li><a href="${contextPath}/customers/delete">Delete
+							Customer</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-8 text-left">
 				<h1>Enter a Customer ID to load that customer</h1>
 				<hr>
-
-				<div class="form-group text-left ">
-					<label class="control-label " for="cid">Customer ID </label>
-					<div class="input-group">
-						<div class="input-group-addon">
-							<span class="glyphicon glyphicon-briefcase"></span>
+				<form>
+					<div class="form-group text-left ">
+						<label class="control-label " for="cid">Customer ID </label>
+						<div class="input-group">
+							<div class="input-group-addon">
+								<span class="glyphicon glyphicon-briefcase"></span>
+							</div>
+							<input class="form-control" id="cid" name="customerId"
+								type="number" placeHolder="Customer ID" />
 						</div>
-						<input class="form-control" id="cid" name="cid" type="text"
-							placeHolder="Customer ID" />
 					</div>
-				</div>
-				
-				
-				<div>
-				<button class="btn btn-primary btn-lg btn-warning" type="submit">LOAD</button>
-				</div>
-				
+
+
+					<div>
+						<button class="btn btn-primary btn-lg btn-warning" type="submit">LOAD</button>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>

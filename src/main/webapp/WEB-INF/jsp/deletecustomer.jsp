@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <head>
 <title>Delete Customer</title>
 <meta charset="utf-8">
@@ -51,7 +56,7 @@
 						<div class="input-group-addon">
 							<span class="glyphicon glyphicon-briefcase"></span>
 						</div>
-						<input class="form-control" id="cid" name="cid" type="text"
+						<input class="form-control" id="cid" name="customerId" type="number"
 							placeHolder="Customer ID" />
 					</div>
 				</div>
