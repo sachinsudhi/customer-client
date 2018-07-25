@@ -41,10 +41,10 @@
 					<li class="active"><a href="${contextPath}/home">Home</a></li>
 					<li><a href="${contextPath}/customers/list">Show Customer</a></li>
 					<li><a href="${contextPath}/customers">Add Customer</a></li>
-					<li><a href="#">Load Customer</a></li>
+					<li><a href="${contextPath}/customers/loadmenu">Load Customer</a></li>
 					<li><a href="${contextPath}/customers/update">Update
 							Customer</a></li>
-					<li><a href="${contextPath}/customers/delete">Delete
+					<li><a href="${contextPath}/customers/deletemenu">Delete
 							Customer</a></li>
 				</ul>
 			</div>

@@ -6,7 +6,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <head>
-<title>Load Customer</title>
+<title>Delete Customer</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet"
@@ -41,10 +41,10 @@
 					<li class="active"><a href="${contextPath}/home">Home</a></li>
 					<li><a href="${contextPath}/customers/list">Show Customer</a></li>
 					<li><a href="${contextPath}/customers">Add Customer</a></li>
-					<li><a href="${contextPath}/customers/load">Load Customer</a></li>
+					<li><a href="${contextPath}/customers/loadmenu">Load Customer</a></li>
 					<li><a href="${contextPath}/customers/update">Update
 							Customer</a></li>
-					<li><a href="#">Delete
+					<li><a href="${contextPath}/customers/deletemenu">Delete
 							Customer</a></li>
 				</ul>
 			</div>

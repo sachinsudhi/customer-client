@@ -39,9 +39,9 @@
 					<li class="active"><a href="${contextPath}/home">Home</a></li>
 					<li><a href="${contextPath}/customers/list">Show Customer</a></li>
 					<li><a href="#">Add Customer</a></li>
-					<li><a href="${contextPath}/customers/load">Load Customer</a></li>
+					<li><a href="${contextPath}/customers/loadmenu">Load Customer</a></li>
 					<li><a href="${contextPath}/customers/update">Update Customer</a></li>
-					<li><a href="${contextPath}/customers/delete">Delete Customer</a></li>
+					<li><a href="${contextPath}/customers/deletemenu">Delete Customer</a></li>
 				</ul>
 			</div>
 			<div class="col-sm-8 text-left">

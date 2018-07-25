@@ -1,4 +1,4 @@
-package trng.springweb.model;
+package trng.springweb.modell;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

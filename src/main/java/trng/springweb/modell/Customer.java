@@ -1,4 +1,4 @@
-package trng.springweb.model;
+package trng.springweb.modell;
 
 import java.util.List;
 
@@ -16,6 +16,8 @@ import javax.persistence.UniqueConstraint;
 import javax.validation.constraints.Email;
 
 import lombok.Data;
+import trng.springweb.model.Address;
+import trng.springweb.model.Orders;
 
 @Entity
 @Table(name = "Customers", uniqueConstraints = { @UniqueConstraint(columnNames = "first_name"),

@@ -1,4 +1,4 @@
-package trng.springweb.model;
+package trng.springweb.modell;
 
 import java.util.Date;
 import java.util.List;
@@ -16,6 +16,7 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 import lombok.Data;
+import trng.springweb.model.OrderProducts;
 
 @Entity
 @Table(name="Orders")
