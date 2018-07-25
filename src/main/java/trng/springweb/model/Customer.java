@@ -78,7 +78,7 @@ public final class Customer {
 		this.address = address;
 	}
 
-	public Customer(int customerID, String title, String firstName, String middleName, String lastName, String suffix,
+	public Customer(Integer customerID, String title, String firstName, String middleName, String lastName, String suffix,
 			String email, String company, String displayName, String printOnCheckAs, String otherDetails) {
 		super();
 		this.customerID = customerID;
@@ -94,7 +94,7 @@ public final class Customer {
 		this.otherDetails = otherDetails;
 	}
 
-	public Customer(int customerID, String title, String firstName, String middleName, String lastName, String suffix,
+	public Customer(Integer customerID, String title, String firstName, String middleName, String lastName, String suffix,
 			String email, String company, String displayName, String printOnCheckAs, String otherDetails,
 			List<Orders> order) {
 		super();
@@ -112,7 +112,7 @@ public final class Customer {
 		this.orders = order;
 	}
 
-	public Customer(int customerID, String title, String firstName, String middleName, String lastName, String suffix,
+	public Customer(Integer customerID, String title, String firstName, String middleName, String lastName, String suffix,
 			String email, String company, String displayName, String printOnCheckAs, String otherDetails,
 			List<Orders> order, Address address) {
 		super();

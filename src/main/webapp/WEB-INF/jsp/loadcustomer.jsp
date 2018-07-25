@@ -51,7 +51,7 @@
 			<div class="col-sm-8 text-left">
 				<h1>Enter a Customer ID to load that customer</h1>
 				<hr>
-				<form>
+				<form method="POST" action="${contextPath}/customers/load">
 					<div class="form-group text-left ">
 						<label class="control-label " for="cid">Customer ID </label>
 						<div class="input-group">
