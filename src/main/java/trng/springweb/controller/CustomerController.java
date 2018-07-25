@@ -56,8 +56,11 @@ public class CustomerController {
        return modelandView;
 	}
    
-   @RequestMapping(value="/delete", method=RequestMethod.GET)
-	public String deleteCustomer() {
-		return "deletecustomer";
+   @RequestMapping(value="/delete", method={RequestMethod.GET, RequestMethod.POST})
+	public ModelAndView deleteCustomer(@RequestParam(value="customerId" ,required=false)Integer customerId, Model model) {
+		 ModelAndView modelandView = new ModelAndView("deletecustomer");
+		 RestTemplate restTemplate = new RestTemplate();
+		 restTemplate.delete(basicURL + "/delete/" + customerId);
+		 return modelandView;
 	}
 }
