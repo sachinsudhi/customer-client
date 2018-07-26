@@ -34,7 +34,6 @@
 			<div class="col-sm-2 sidenav">
 				<ul class="nav">
 					<li class="active"><a href="#">Home</a></li>
-					<li><a href="${contextPath}/customers/list">Show Customer</a></li>
 					<li><a href="${contextPath}/customers">Add Customer</a></li>
 					<li><a href="${contextPath}/customers/loadmenu">Load Customer</a></li>
 					<li><a href="${contextPath}/customers/update">Update Customer</a></li>

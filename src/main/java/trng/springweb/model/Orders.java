@@ -1,4 +1,4 @@
-package trng.springweb.modell;
+package trng.springweb.model;
 
 import java.util.Date;
 import java.util.List;
