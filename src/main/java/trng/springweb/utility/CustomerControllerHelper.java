@@ -50,10 +50,10 @@ public class CustomerControllerHelper {
 	public static Customer updateCustomerRESTHandler(Customer customer) {
 		RestTemplate restTemplate = new RestTemplate();
 		HttpEntity<Customer> entity = new HttpEntity<Customer>(customer);
-		ResponseEntity<Customer> responseEntity = restTemplate.exchange(basicURL + "/update", HttpMethod.POST, entity,
+		ResponseEntity<Customer> responseEntity = restTemplate.exchange(basicURL + "/update", HttpMethod.PUT, entity,
 				Customer.class);
 		if (responseEntity.getStatusCode() == HttpStatus.ACCEPTED) {
-			System.out.println("Customer data updated successfully, id: " + responseEntity.getBody().getCustomerID());
+			//System.out.println("Customer data updated successfully, id: " + responseEntity.getBody().getCustomerID());
 			return responseEntity.getBody();
 		} else {
 			return null;

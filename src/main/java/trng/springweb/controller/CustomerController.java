@@ -47,14 +47,11 @@ public class CustomerController {
   	}
    
    @RequestMapping(value="/updated", method=RequestMethod.POST)
- 	public String updateCustomer(@ModelAttribute("customer")Customer customer, Model model) {
+ 	public ModelAndView updateCustomer(@ModelAttribute("customer")Customer customer, Model model) {
 	  Customer ret= CustomerControllerHelper.updateCustomerRESTHandler(customer);
-	   if(ret!=null)
-	     {
-	      model.addAttribute("customer",ret);
-	      return "customerlist";
-	     }
-	     return "error";
+	      ModelAndView mdv=new ModelAndView("customerlist");
+	      mdv.addObject(customer);
+	      return mdv;
  	}
    
    @RequestMapping(value="/list", method=RequestMethod.GET)

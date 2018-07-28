@@ -4,6 +4,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <title>Customer Edit Page</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -50,8 +51,11 @@
 
 				<h1>Enter Customer Details</h1>
 				<hr>
-				<form:form method="POST" action="${contextPath}/customers/updated"
+
+				<form:form method="POST"
+					action="${contextPath}/customers/updated"
 					modelAttribute="customer">
+
 					<div class="form-group text-left ">
 						<label class="control-label " for="lname"> Customer ID </label>
 						<div class="input-group">
@@ -59,9 +63,10 @@
 								<span class="glyphicon glyphicon-user"></span>
 							</div>
 							<form:input path="customerID" class="form-control" id="lname"
-								name="lname" type="number" placeHolder="Customer ID" />
+								name="lname" type="Integer" placeHolder="Customer ID" />
 						</div>
 					</div>
+
 					<div class="form-group">
 						<label for="Title Select">Title</label>
 						<form:select class="form-control" id="exampleFormControlSelect1"
@@ -125,8 +130,8 @@
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-envelope"></span>
 							</div>
-							<form:input path="email" class="form-control" id="email" name="email" type="text"
-								placeHolder="E-mail Address" />
+							<form:input path="email" class="form-control" id="email"
+								name="email" type="text" placeHolder="E-mail Address" />
 						</div>
 					</div>
 
@@ -136,8 +141,8 @@
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-folder-close"></span>
 							</div>
-							<form:input path="company" class="form-control" id="company" name="company"
-								type="text" placeHolder="Company" />
+							<form:input path="company" class="form-control" id="company"
+								name="company" type="text" placeHolder="Company" />
 						</div>
 					</div>
 
@@ -147,8 +152,8 @@
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-user"></span>
 							</div>
-							<form:input path="displayName" class="form-control" id="dname" name="dname" type="text"
-								placeHolder="Display Name" />
+							<form:input path="displayName" class="form-control" id="dname"
+								name="dname" type="text" placeHolder="Display Name" />
 						</div>
 					</div>
 
@@ -159,8 +164,9 @@
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-user"></span>
 							</div>
-							<form:input path="printOnCheckAs" class="form-control" id="poncheck" name="poncheck"
-								type="text" placeHolder="Print on Check" />
+							<form:input path="printOnCheckAs" class="form-control"
+								id="poncheck" name="poncheck" type="text"
+								placeHolder="Print on Check" />
 						</div>
 					</div>
 
@@ -171,8 +177,9 @@
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-road"></span>
 							</div>
-							<form:input path="address.billingStreet" class="form-control" id="bstreet" name="bstreet"
-								type="text" placeHolder="Billing Street" />
+							<form:input path="address.billingStreet" class="form-control"
+								id="bstreet" name="bstreet" type="text"
+								placeHolder="Billing Street" />
 						</div>
 					</div>
 
@@ -182,14 +189,15 @@
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-road"></span>
 							</div>
-							<form:input path="address.billingCity" class="form-control" id="bcity" name="bcity" type="text"
-								placeHolder="Billing city" />
+							<form:input path="address.billingCity" class="form-control"
+								id="bcity" name="bcity" type="text" placeHolder="Billing city" />
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label for="State-Select">Billing State</label> <form:select
-							class="form-control" id="suffixControlSelect" type="text" path="address.billingState">
+						<label for="State-Select">Billing State</label>
+						<form:select class="form-control" id="suffixControlSelect"
+							type="text" path="address.billingState">
 							<form:option value="" label="--SELECT--" />
 							<form:option value="CA">CA</form:option>
 							<form:option value="NV">NV</form:option>
@@ -206,8 +214,8 @@
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-road"></span>
 							</div>
-							<form:input path="address.billingZIP" class="form-control" id="bzip" name="bzip" type="text"
-								placeHolder="Billing ZIP" />
+							<form:input path="address.billingZIP" class="form-control"
+								id="bzip" name="bzip" type="text" placeHolder="Billing ZIP" />
 						</div>
 					</div>
 
@@ -218,8 +226,9 @@
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-road"></span>
 							</div>
-							<form:input path="address.billingCountry" class="form-control" id="bcountry" name="bcountry"
-								type="text" placeHolder="Billing Country" />
+							<form:input path="address.billingCountry" class="form-control"
+								id="bcountry" name="bcountry" type="text"
+								placeHolder="Billing Country" />
 						</div>
 					</div>
 
@@ -230,8 +239,9 @@
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-road"></span>
 							</div>
-							<form:input path="address.shippingStreet" class="form-control" id="sstreet" name="sstreet"
-								type="text" placeHolder="Shipping Street" />
+							<form:input path="address.shippingStreet" class="form-control"
+								id="sstreet" name="sstreet" type="text"
+								placeHolder="Shipping Street" />
 						</div>
 					</div>
 
@@ -241,14 +251,15 @@
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-road"></span>
 							</div>
-							<form:input path="address.shippingCity" class="form-control" id="scity" name="scity" type="text"
-								placeHolder="Shipping city" />
+							<form:input path="address.shippingCity" class="form-control"
+								id="scity" name="scity" type="text" placeHolder="Shipping city" />
 						</div>
 					</div>
 
 					<div class="form-group">
-						<label for="State-Select">Shipping State</label> <form:select
-							class="form-control" id="suffixControlSelect" type="text" path="address.shippingState">
+						<label for="State-Select">Shipping State</label>
+						<form:select class="form-control" id="suffixControlSelect"
+							type="text" path="address.shippingState">
 							<form:option value="" label="--SELECT--" />
 							<form:option value="CA">CA</form:option>
 							<form:option value="NV">NV</form:option>
@@ -265,8 +276,8 @@
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-road"></span>
 							</div>
-							<form:input path="address.shippingZIP" class="form-control" id="szip" name="szip" type="text"
-								placeHolder="Shipping ZIP" />
+							<form:input path="address.shippingZIP" class="form-control"
+								id="szip" name="szip" type="text" placeHolder="Shipping ZIP" />
 						</div>
 					</div>
 
@@ -277,8 +288,9 @@
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-road"></span>
 							</div>
-							<form:input path="address.shippingCountry" class="form-control" id="scountry" name="scountry"
-								type="text" placeHolder="Shipping Country" />
+							<form:input path="address.shippingCountry" class="form-control"
+								id="scountry" name="scountry" type="text"
+								placeHolder="Shipping Country" />
 						</div>
 					</div>
 
@@ -288,7 +300,8 @@
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-road"></span>
 							</div>
-							<form:textarea path="otherDetails" type="text" id="odetails" rows="3" cols="110"/>
+							<form:textarea path="otherDetails" type="text" id="odetails"
+								rows="3" cols="110" />
 						</div>
 					</div>
 

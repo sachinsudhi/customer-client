@@ -87,7 +87,7 @@
 					</div>
 
 					<div class="form-group text-left ">
-						<label class="control-label " for="lname"> Last Name </label>
+						<label class="control-label " for="lname"> Last Name</label>
 						<div class="input-group">
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-user"></span>
@@ -110,7 +110,7 @@
 					</div>
 
 					<div class="form-group text-left ">
-						<label class="control-label " for="email"> Email </label>
+						<label class="control-label " for="email"> Email</label>
 						<div class="input-group">
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-envelope"></span>
@@ -121,7 +121,7 @@
 					</div>
 
 					<div class="form-group text-left ">
-						<label class="control-label" for="company">Company </label>
+						<label class="control-label" for="company">Company</label>
 						<div class="input-group">
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-folder-close"></span>
@@ -167,7 +167,7 @@
 					</div>
 
 					<div class="form-group text-left ">
-						<label class="control-label" for="bcity">Billing City </label>
+						<label class="control-label" for="bcity">Billing City</label>
 						<div class="input-group">
 							<div class="input-group-addon">
 								<span class="glyphicon glyphicon-road"></span>

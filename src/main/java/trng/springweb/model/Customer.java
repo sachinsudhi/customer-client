@@ -35,14 +35,12 @@ public final class Customer {
 	private String title;
 
 	@Column(name = "first_name")
-	@NotEmpty
 	private String firstName;
 
 	@Column(name = "middle_name")
 	private String middleName;
 
 	@Column(name = "last_name")
-	@NotEmpty
 	private String lastName;
 
 	@Column(name = "suffix")
@@ -73,12 +71,37 @@ public final class Customer {
 	public Customer() {
 		super();
 	}
+	
+	public Customer(String firstName, String middleName, String lastName) {
+		super();
+		this.firstName = firstName;
+		this.middleName = middleName;
+		this.lastName = lastName;
+	}
+	
+	public Customer(Integer customerID, String firstName, String middleName, String lastName) {
+		super();
+		this.customerID=customerID;
+		this.firstName = firstName;
+		this.middleName = middleName;
+		this.lastName = lastName;
+	}
 
 	public Customer(String firstName, String middleName, String lastName, Address address) {
 		super();
 		this.firstName = firstName;
 		this.middleName = middleName;
 		this.lastName = lastName;
+		this.address = address;
+	}
+	
+	public Customer(String firstName,String lastName,String email, String company,
+			Address address) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.email = email;
+		this.company = company;
 		this.address = address;
 	}
 
